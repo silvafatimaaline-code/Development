@@ -1,15 +1,17 @@
-# Visual Studio
+# Arquivos de cache, build e configuração local do Visual Studio
 .vs/
 *.user
 *.suo
 *.cache
 
-# Build
+# Diretórios de build do .NET
 bin/
 obj/
-dist/
 
-# Node / Angular
-node_modules/
+# Arquivos de build e cache do Angular
+sisand-frontend/.angular/
+sisand-frontend/dist/
+sisand-frontend/node_modules/
+
+# Logs e outros
 npm-debug.log
-package-lock.json
