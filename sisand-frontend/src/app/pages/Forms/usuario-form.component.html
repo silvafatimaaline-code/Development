@@ -1,0 +1,63 @@
+﻿<div class="usuarios-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-logo">
+            <img src="assets/logo.png" alt="Logo Sisand">
+        </div>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="main-content">
+        <h2>Cadastro de Usuário</h2>
+
+        <form (ngSubmit)="salvarUsuario()" #usuarioForm="ngForm">
+            <div class="mb-3">
+                <label for="nomeUsuario" class="form-label">Nome </label>
+                <input type="text" id="nomeUsuario" class="form-control"
+                       [(ngModel)]="usuario.nomeUsuario" name="nomeUsuario" required>
+            </div>
+
+            <div style="margin-top: 10px;"></div>
+
+            <div class="mb-3">
+                <label for="usuarioLogin" class="form-label">Login </label>
+                <input type="text" id="usuarioLogin" class="form-control"
+                       [(ngModel)]="usuario.usuarioLogin" name="usuarioLogin" required>
+            </div>
+
+            <div style="margin-top: 10px;"></div>
+
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha </label>
+                <input type="password" id="senha" class="form-control"
+                       [(ngModel)]="senha" name="senha" required>
+            </div>
+
+            <div style="margin-top: 10px;"></div>
+
+            <div class="mb-3">
+                <label for="confirmacaoSenha" class="form-label">Confirme a Senha </label>
+                <input type="password" id="confirmacaoSenha" class="form-control"
+                       [(ngModel)]="confirmacaoSenha" name="confirmacaoSenha" required>
+            </div>
+
+            <div style="margin-top: 10px;"></div>
+
+            <div class="form-check mb-4">
+                <input type="checkbox" class="form-check-input" id="ativo"
+                       [(ngModel)]="usuarioAtivoBoolean" name="ativo">
+            </div>
+
+            <div style="margin-top: 10px;"></div>
+
+            <div *ngIf="mensagemErro" class="alert alert-danger">
+                {{ mensagemErro }}
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-outline-secondary w-45" (click)="cancelar()">Cancelar</button>
+                <button type="submit" class="btn btn-outline-primary w-45">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="usuarios-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-logo">
+            <img src="assets/logo.png" alt="Logo Sisand">
+        </div>
+        <button class="btn btn-success w-100 mb-2" (click)="novoUsuario()">Incluir</button>
+        <button class="btn btn-danger w-100" (click)="logoff()">Sair</button>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="main-content">
+        <h2>Lista de Usuários</h2>
+
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Login</th>
+                    <th>Nome</th>
+                    <th>Ativo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let u of usuarios">
+                    <td>{{ u.idUsuario }}</td>
+                    <td>{{ u.usuarioLogin }}</td>
+                    <td>{{ u.nomeUsuario }}</td>
+                    <td>{{ u.ativo === 's' ? 'Sim' : 'Não' }}</td>
+                    <td>
+                        <button (click)="editarUsuario(u.idUsuario)">Editar</button>
+                        <button (click)="excluirUsuario(u.idUsuario)">Excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

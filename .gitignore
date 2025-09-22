@@ -1,0 +1,15 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+
+# Build
+bin/
+obj/
+dist/
+
+# Node / Angular
+node_modules/
+npm-debug.log
+package-lock.json
