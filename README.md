@@ -139,9 +139,3 @@ Instruções para quem deseja contribuir com o projeto.
 3.  Faça o Commit de suas mudanças (`git commit -m 'Add some AmazingFeature'`)
 4.  Faça o Push para a Branch (`git push origin feature/AmazingFeature`)
 5.  Abra um Pull Request
-
----
-
-## 📜 Licença
-
-Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
